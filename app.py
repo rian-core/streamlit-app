@@ -73,12 +73,18 @@ with col1:
     )
 
 with col2:
+    st.markdown("<div class='lottie-wrapper'>", unsafe_allow_html=True)
+
     st_lottie(
-        hero_lottie,
-        height=80,
-        speed=0.9,
-        loop=True
-    )
+      hero_lottie,
+      height=80,
+      speed=0.9,
+      loop=True)
+
+
+st.markdown("</div>", unsafe_allow_html=True)
+
+    
 
 
 st.write("")
