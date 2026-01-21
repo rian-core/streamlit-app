@@ -11,14 +11,16 @@ st.markdown("""
 .typewriter {
     font-size: 42px;
     font-weight: 800;
-    color: #4f46e5;   /* light + dark safe */
+    color: #6b4f4f;   /* light + dark safe */
     overflow: hidden;
     white-space: nowrap;
     border-right: 3px solid rgba(79,70,229,0.8);
     width: 0;
     animation:
-        typing 3s steps(35, end) forwards,
-        blink 0.8s step-end infinite;
+        typing 3s steps(35, end) forwards;
+        border-right: none;
+
+        
 }
 
 /* typing animation */
@@ -39,4 +41,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.write("Colab me Streamlit chal raha hai 😎")
+st.write("")
+with st.sidebar:
+    st.header("⚙️ Controls")
+    st.file_uploader("Upload query image", type=["jpg","jpeg","png"])
+    st.slider("Top-K results", 1, 10, 5)
+    st.button("🔍 Run Search")
