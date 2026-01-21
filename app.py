@@ -7,12 +7,8 @@ def load_lottie(path):
     with open(path, "r") as f:
         return json.load(f)
 hero_lottie = load_lottie('search.json')
-st.lottie(
-    hero_lottie,
-    height=160,
-    speed=0.9,
-    loop=True
-)
+
+
 
 
 
@@ -67,10 +63,23 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown(
-    '<div class="typewriter">🖼️ Near-Duplicate Image Detection</div>',
-    unsafe_allow_html=True
-)
+
+col1, col2 = st.columns([3, 1])
+
+with col1:
+    st.markdown(
+        "<div class='typewriter'>🖼️ Near-Duplicate Image Detection</div>",
+        unsafe_allow_html=True
+    )
+
+with col2:
+    st_lottie(
+        hero_lottie,
+        height=80,
+        speed=0.9,
+        loop=True
+    )
+
 
 st.write("")
 with st.sidebar:
