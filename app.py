@@ -1,4 +1,20 @@
 import streamlit as st
+from streamlit_lottie import st_lottie
+import json
+
+@st.cache_data
+def load_lottie(path):
+    with open(path, "r") as f:
+        return json.load(f)
+hero_lottie = load_lottie('search.json')
+st.lottie(
+    hero_lottie,
+    height=160,
+    speed=0.9,
+    loop=True
+)
+
+
 
 st.set_page_config(
     page_title="Near-Duplicate Image Detection",
