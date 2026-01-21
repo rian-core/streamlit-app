@@ -83,6 +83,15 @@ with col2:
 
 
 st.markdown("</div>", unsafe_allow_html=True)
+st.markdown("""
+<style>
+/* Make Lottie background transparent */
+div[data-testid="stLottie"] {
+    background: transparent !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 
     
 
