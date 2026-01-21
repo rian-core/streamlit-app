@@ -13,7 +13,7 @@ if st.button("Make chai"):
 add_masala=st.checkbox("Add masala")
 if add_masala:
   st.write("Masala added")
-tea_type=st.radio("Pick your chai base:"",["Milk","Water",])
+tea_type=st.radio("Pick your chai base:",["Milk","Water",])
 st.write("Your selected base:",tea_type)
 favour=st.selectbox(["adrak","tulsi"])
 
