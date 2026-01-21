@@ -3,8 +3,22 @@ import streamlit as st
 st.set_page_config(
     page_title="Near-Duplicate Image Detection",
     page_icon="🖼️",
+   
     layout="wide"
 )
+st.markdown("""
+<style>
+.stApp {
+    background: linear-gradient(
+        135deg,
+        #0f172a 0%,
+        #111827 50%,
+        #020617 100%
+    );
+}
+</style>
+""", unsafe_allow_html=True)
+
 
 st.markdown("""
 <style>
@@ -43,7 +57,7 @@ st.markdown(
 
 st.write("")
 with st.sidebar:
-    st.header("⚙️ Controls")
+    st.header("WELCOME!!")
     st.file_uploader("Upload query image", type=["jpg","jpeg","png"])
-    st.slider("Top-K results", 1, 10, 5)
+    st.slider("Top-K results", 1, 5, 5)
     st.button("🔍 Run Search")
