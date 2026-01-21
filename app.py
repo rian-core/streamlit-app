@@ -11,13 +11,14 @@ st.markdown("""
 .stApp {
     background: linear-gradient(
         135deg,
-        #0f172a 0%,
-        #111827 50%,
-        #020617 100%
+        #f5f7fa 0%,
+        #eef2ff 50%,
+        #f8fafc 100%
     );
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 st.markdown("""
